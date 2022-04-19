@@ -14,13 +14,13 @@
 $dist/default/production\LAB8_PuC.X.production.o
 cinit CODE 0 F F 4 2 1
 idloc IDLOC 5 2000 2000 4 2 1
-text1 CODE 0 13 13 38 2 1
-text2 CODE 0 4B 4B 19 2 1
-maintext CODE 0 64 64 10 2 1
-cstackCOMMON COMMON 1 70 70 4 1 1
+text1 CODE 0 13 13 3E 2 1
+text2 CODE 0 80 80 25 2 1
+maintext CODE 0 51 51 2F 2 1
+cstackCOMMON COMMON 1 70 70 5 1 1
 intentry CODE 0 4 4 8 2 1
 config CONFIG 4 2007 2007 2 2 1
-$C:\Users\usuario\AppData\Local\Temp\xcAs6p4.o
+$C:\Users\usuario\AppData\Local\Temp\xcAskmg.o
 idloc IDLOC 5 2000 2000 4 2 1
 reset_vec CODE 0 0 0 3 2 1
 end_init CODE 0 C C 3 2 1
@@ -40,21 +40,21 @@ BANK1 A0-EF 1
 BANK2 110-16F 1
 BANK3 190-1EF 1
 CONST 3-3 2
-CONST 74-1FFF 2
+CONST A5-1FFF 2
 ENTRY 3-3 2
-ENTRY 74-1FFF 2
+ENTRY A5-1FFF 2
 CODE 3-3 2
-CODE 74-1FFF 2
+CODE A5-1FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-10F 1
 SFR3 180-18F 1
-COMMON 74-7D 1
+COMMON 75-7D 1
 EEDATA 2100-21FF 2
 STRCODE 3-3 2
-STRCODE 74-1FFF 2
+STRCODE A5-1FFF 2
 STRING 3-3 2
-STRING 74-1FFF 2
+STRING A5-1FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -69,44 +69,57 @@ STRING 74-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\LAB8_PuC.X.production.o
-F cinit CODE >454:C:\Users\usuario\AppData\Local\Temp\xcAs6p4.s
-F cinit CODE >457:C:\Users\usuario\AppData\Local\Temp\xcAs6p4.s
-F cinit CODE >463:C:\Users\usuario\AppData\Local\Temp\xcAs6p4.s
-F cinit CODE >465:C:\Users\usuario\AppData\Local\Temp\xcAs6p4.s
-10 cinit CODE >466:C:\Users\usuario\AppData\Local\Temp\xcAs6p4.s
+F cinit CODE >458:C:\Users\usuario\AppData\Local\Temp\xcAskmg.s
+F cinit CODE >461:C:\Users\usuario\AppData\Local\Temp\xcAskmg.s
+F cinit CODE >467:C:\Users\usuario\AppData\Local\Temp\xcAskmg.s
+F cinit CODE >469:C:\Users\usuario\AppData\Local\Temp\xcAskmg.s
+10 cinit CODE >470:C:\Users\usuario\AppData\Local\Temp\xcAskmg.s
 4 intentry CODE >42:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
-4B text2 CODE >42:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
-4B text2 CODE >43:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
-51 text2 CODE >44:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
-56 text2 CODE >44:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
-5A text2 CODE >45:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
-5C text2 CODE >48:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
-5D text2 CODE >51:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
-13 text1 CODE >65:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
-13 text1 CODE >67:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
-19 text1 CODE >68:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
-1A text1 CODE >70:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
-1E text1 CODE >71:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
-1F text1 CODE >72:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
-23 text1 CODE >73:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
-26 text1 CODE >74:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
-29 text1 CODE >75:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
-2C text1 CODE >79:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
-30 text1 CODE >80:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
-33 text1 CODE >81:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
-34 text1 CODE >82:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
-38 text1 CODE >83:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
-3B text1 CODE >84:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
-3E text1 CODE >85:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
-42 text1 CODE >87:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
-43 text1 CODE >88:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
-44 text1 CODE >89:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
-47 text1 CODE >90:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
-4A text1 CODE >93:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
-64 maintext CODE >54:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
-64 maintext CODE >55:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
-69 maintext CODE >57:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
-6F maintext CODE >58:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
+80 text2 CODE >42:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
+80 text2 CODE >43:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
+86 text2 CODE >44:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
+8B text2 CODE >44:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
+8F text2 CODE >45:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
+91 text2 CODE >46:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
+92 text2 CODE >47:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
+97 text2 CODE >47:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
+9B text2 CODE >48:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
+9D text2 CODE >50:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
+9E text2 CODE >53:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
+13 text1 CODE >72:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
+13 text1 CODE >74:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
+19 text1 CODE >75:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
+1A text1 CODE >77:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
+1E text1 CODE >78:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
+1F text1 CODE >79:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
+23 text1 CODE >80:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
+26 text1 CODE >81:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
+29 text1 CODE >82:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
+2C text1 CODE >83:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
+2F text1 CODE >84:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
+32 text1 CODE >88:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
+36 text1 CODE >89:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
+39 text1 CODE >90:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
+3A text1 CODE >91:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
+3E text1 CODE >92:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
+41 text1 CODE >93:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
+44 text1 CODE >94:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
+48 text1 CODE >96:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
+49 text1 CODE >97:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
+4A text1 CODE >98:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
+4D text1 CODE >99:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
+50 text1 CODE >102:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
+51 maintext CODE >56:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
+51 maintext CODE >57:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
+56 maintext CODE >59:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
+5C maintext CODE >60:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
+61 maintext CODE >60:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
+65 maintext CODE >61:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
+6A maintext CODE >62:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
+6F maintext CODE >62:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
+73 maintext CODE >63:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
+75 maintext CODE >64:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
+79 maintext CODE >65:C:\Users\usuario\Desktop\UVG\Semestre5\PrograMicros\Laboratorios\LAB8_PuC.X\mainL8.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -120,24 +133,24 @@ F cinit CODE >465:C:\Users\usuario\AppData\Local\Temp\xcAs6p4.s
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
 ___latbits 2 0 ABS 0 - dist/default/production\LAB8_PuC.X.production.o
-__Hspace_0 74 0 ABS 0 - -
-__Hspace_1 74 0 ABS 0 - -
+__Hspace_0 A5 0 ABS 0 - -
+__Hspace_1 75 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 __Hspace_4 4010 0 ABS 0 - -
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 __Hstrings 0 0 ABS 0 strings -
-___sp 0 0 STACK 2 stack C:\Users\usuario\AppData\Local\Temp\xcAs6p4.o
-_main C8 0 CODE 0 maintext dist/default/production\LAB8_PuC.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\usuario\AppData\Local\Temp\xcAskmg.o
+_main A2 0 CODE 0 maintext dist/default/production\LAB8_PuC.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\LAB8_PuC.X.production.o
-start 18 0 CODE 0 init C:\Users\usuario\AppData\Local\Temp\xcAs6p4.o
+start 18 0 CODE 0 init C:\Users\usuario\AppData\Local\Temp\xcAskmg.o
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\usuario\AppData\Local\Temp\xcAs6p4.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\usuario\AppData\Local\Temp\xcAs6p4.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\usuario\AppData\Local\Temp\xcAs6p4.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\usuario\AppData\Local\Temp\xcAs6p4.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\usuario\AppData\Local\Temp\xcAs6p4.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\usuario\AppData\Local\Temp\xcAs6p4.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\usuario\AppData\Local\Temp\xcAskmg.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\usuario\AppData\Local\Temp\xcAskmg.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\usuario\AppData\Local\Temp\xcAskmg.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\usuario\AppData\Local\Temp\xcAskmg.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\usuario\AppData\Local\Temp\xcAskmg.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\usuario\AppData\Local\Temp\xcAskmg.o
 _OSCCONbits 8F 0 ABS 0 - dist/default/production\LAB8_PuC.X.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\LAB8_PuC.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
@@ -145,10 +158,10 @@ __Hclrtext 0 0 ABS 0 clrtext -
 _ADRESH 1E 0 ABS 0 - dist/default/production\LAB8_PuC.X.production.o
 _ANSELH 189 0 ABS 0 - dist/default/production\LAB8_PuC.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
-___stackhi 0 0 ABS 0 - C:\Users\usuario\AppData\Local\Temp\xcAs6p4.o
-___stacklo 0 0 ABS 0 - C:\Users\usuario\AppData\Local\Temp\xcAs6p4.o
+___stackhi 0 0 ABS 0 - C:\Users\usuario\AppData\Local\Temp\xcAskmg.o
+___stacklo 0 0 ABS 0 - C:\Users\usuario\AppData\Local\Temp\xcAskmg.o
 start_initialization 1E 0 CODE 0 cinit dist/default/production\LAB8_PuC.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\usuario\AppData\Local\Temp\xcAs6p4.o
+___int_sp 0 0 STACK 2 stack C:\Users\usuario\AppData\Local\Temp\xcAskmg.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -184,16 +197,16 @@ __Lsfr2 0 0 ABS 0 sfr2 -
 __Lsfr3 0 0 ABS 0 sfr3 -
 __Ltext 0 0 ABS 0 text -
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
-__S0 74 0 ABS 0 - -
-__S1 74 0 ABS 0 - -
+__S0 A5 0 ABS 0 - -
+__S1 75 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
-_isr 96 0 CODE 0 text2 dist/default/production\LAB8_PuC.X.production.o
+_isr 100 0 CODE 0 text2 dist/default/production\LAB8_PuC.X.production.o
 saved_w 7E 0 ABS 0 - dist/default/production\LAB8_PuC.X.production.o
-__end_of_isr C8 0 CODE 0 text2 dist/default/production\LAB8_PuC.X.production.o
+__end_of_isr 14A 0 CODE 0 text2 dist/default/production\LAB8_PuC.X.production.o
 __Lintentry 8 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\usuario\AppData\Local\Temp\xcAs6p4.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\usuario\AppData\Local\Temp\xcAskmg.o
 _PIE1bits 8C 0 ABS 0 - dist/default/production\LAB8_PuC.X.production.o
-__pmaintext C8 0 CODE 0 maintext dist/default/production\LAB8_PuC.X.production.o
+__pmaintext A2 0 CODE 0 maintext dist/default/production\LAB8_PuC.X.production.o
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 0 0 CONFIG 4 config -
 _ADCON0bits 1F 0 ABS 0 - dist/default/production\LAB8_PuC.X.production.o
@@ -211,7 +224,7 @@ __Hintentry 18 0 CODE 0 intentry -
 __Lstrings 0 0 ABS 0 strings -
 __Hreset_vec 6 0 CODE 0 reset_vec -
 __ptext1 26 0 CODE 0 text1 dist/default/production\LAB8_PuC.X.production.o
-__ptext2 96 0 CODE 0 text2 dist/default/production\LAB8_PuC.X.production.o
+__ptext2 100 0 CODE 0 text2 dist/default/production\LAB8_PuC.X.production.o
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
 __Lreset_vec 0 0 CODE 0 reset_vec -
@@ -220,13 +233,15 @@ __Lfunctab 0 0 ENTRY 0 functab -
 __Lclrtext 0 0 ABS 0 clrtext -
 __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\LAB8_PuC.X.production.o
 __Hend_init 1E 0 CODE 0 end_init -
-__end_of_main E8 0 CODE 0 maintext dist/default/production\LAB8_PuC.X.production.o
+__end_of_main 100 0 CODE 0 maintext dist/default/production\LAB8_PuC.X.production.o
 _ANSEL 188 0 ABS 0 - dist/default/production\LAB8_PuC.X.production.o
 _PORTA 5 0 ABS 0 - dist/default/production\LAB8_PuC.X.production.o
+_PORTB 6 0 ABS 0 - dist/default/production\LAB8_PuC.X.production.o
 _PORTC 7 0 ABS 0 - dist/default/production\LAB8_PuC.X.production.o
 _TRISA 85 0 ABS 0 - dist/default/production\LAB8_PuC.X.production.o
+_TRISB 86 0 ABS 0 - dist/default/production\LAB8_PuC.X.production.o
 _TRISC 87 0 ABS 0 - dist/default/production\LAB8_PuC.X.production.o
-__end_of_setup 96 0 CODE 0 text1 dist/default/production\LAB8_PuC.X.production.o
+__end_of_setup A2 0 CODE 0 text1 dist/default/production\LAB8_PuC.X.production.o
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
 interrupt_function 8 0 CODE 0 intentry dist/default/production\LAB8_PuC.X.production.o
@@ -258,8 +273,8 @@ __initialization 1E 0 CODE 0 cinit dist/default/production\LAB8_PuC.X.production
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-cstackCOMMON 1 70 70 4 1
-intentry 0 4 8 70 2
+cstackCOMMON 1 70 70 5 1
+intentry 0 4 8 A1 2
 reset_vec 0 0 0 3 2
 # %NOTES Section
 # This section contains data of all the note-psects.  The beginning of the section

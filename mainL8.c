@@ -43,7 +43,9 @@ void __interrupt() isr (void){
     if(PIR1bits.ADIF){
         if(ADCON0bits.CHS == 0){
             PORTC = ADRESH;
-            //PORTD = ADRESL;
+        }
+        else if(ADCON0bits.CHS == 1){
+            PORTB = ADRESH;
         }
         PIR1bits.ADIF = 0;
     }
@@ -55,7 +57,12 @@ void main (void){
     setup();                        
     while(1){
         if(ADCON0bits.GO == 0){
-            ADCON0bits.GO = 1;
+            if(ADCON0bits.CHS == 0)
+                ADCON0bits.CHS = 0b0001;
+            else if(ADCON0bits.CHS == 1)
+                ADCON0bits.CHS = 0b0000;
+            __delay_us(40);
+            ADCON0bits.GO = 1; 
         }
     }
     return;
@@ -67,10 +74,12 @@ void setup(void){
     OSCCONbits.IRCF = 0b0110;    // FOSC: 4MHz
     OSCCONbits.SCS = 1;         // Oscilador interno
     
-    ANSEL = 0b00000001;         // AN0 como entrada analógica
+    ANSEL = 0b00000011;         // AN0 y AN1 como entradas analógicas
     ANSELH = 0;                 // I/O digitales para PORTB
-    TRISA = 0b00000001;         // AN0 como entrada
+    TRISA = 0b00000011;         // AN0 y AN1 como entradas
     PORTA = 0;                  // Limpiar PORTA
+    TRISB = 0;                  // PORTB como salida
+    PORTB = 0;                  // Limpiar PORTB
     TRISC = 0;                  // PORTC como salida
     PORTC = 0;                  // Limpiar PORTC
     //TRISD = 0;                  // PORTD como salida
