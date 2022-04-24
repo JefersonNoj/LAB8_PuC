@@ -2829,26 +2829,25 @@ extern char * ultoa(char * buf, unsigned long val, int base);
 
 extern char * ftoa(float f, int * status);
 # 33 "mainL8.c" 2
-
-
-
-
-
-
-
+# 43 "mainL8.c"
 uint8_t selector = 0;
-int valor = 0;
-int unidades = 0;
-int decenas = 0;
-int centenas = 0;
+unsigned short valor = 0;
+uint8_t unidades = 0;
+uint8_t decimal = 0;
+uint8_t decenasDec = 0;
+uint8_t unidadesDec = 0;
 uint8_t valor_tabla = 0;
+uint8_t disp0 = 0;
+uint8_t disp1 = 0;
+uint8_t disp2 = 0;
 
 
 void setup(void);
 void multiplexado(uint8_t select);
-int map(uint8_t val);
-void obtener_decimal(int value);
-void tabla_7seg(int decimal);
+unsigned short map(uint8_t val, uint8_t in_min, uint8_t in_max,
+                unsigned short out_min, unsigned short out_max);
+void obtener_decimal(unsigned short value);
+void tabla_7seg(uint8_t decimal);
 
 
 void __attribute__((picinterrupt(("")))) isr (void){
@@ -2858,7 +2857,7 @@ void __attribute__((picinterrupt(("")))) isr (void){
         }
         else if(ADCON0bits.CHS == 1){
 
-            valor = map(ADRESH);
+            valor = map(ADRESH, 0, 255, 0, 5);
         }
         PIR1bits.ADIF = 0;
     }
@@ -2884,8 +2883,8 @@ void main (void){
             _delay((unsigned long)((40)*(4000000/4000000.0)));
             ADCON0bits.GO = 1;
         }
-        obtener_decimal(valor);
-        multiplexado(selector);
+
+
     }
     return;
 }
@@ -2930,48 +2929,43 @@ void setup(void){
     return;
 }
 
-
-int map(uint8_t val){
-    return 2*val;
+unsigned short map(uint8_t x, uint8_t x0, uint8_t x1,
+                    unsigned short y0, unsigned short y1){
+    return (unsigned short)(y0+((float)(y1-y0)/(x1-x0))*(x-x0));
 }
 
 
-void obtener_decimal(int valor){
-    centenas = 0;
-    decenas = 0;
-    unidades = 0;
-    if (valor >= 100){
-        centenas = valor/100;
-        valor = valor%100;
+void obtener_decimal(unsigned short valor){
+    unidades = (uint8_t)valor;
+    decimal = (uint8_t)((valor-unidades)*100);
+
+    if (decimal >= 10){
+        decenasDec = decimal/10;
+        unidadesDec = decimal%10;
     }
-    if (valor >= 10){
-        decenas = valor/10;
-        unidades = valor%10;
-    }
-    if (valor < 10)
-        unidades = valor;
+    if (decimal < 10)
+        unidadesDec = decimal;
+
     return;
 }
 
 
 void multiplexado(uint8_t selector){
     PORTD = 0;
-    PORTCbits.RC7 = 1;
     switch(selector){
         case 0:
-            tabla_7seg(unidades);
+            tabla_7seg(unidadesDec);
             PORTC = valor_tabla;
             PORTDbits.RD0 = 1;
             break;
         case 1:
-            tabla_7seg(decenas);
+            tabla_7seg(decenasDec);
             PORTC = valor_tabla;
             PORTDbits.RD1 = 1;
             break;
         case 2:
-            tabla_7seg(centenas);
+            tabla_7seg(unidades);
             PORTC = valor_tabla;
-            PORTCbits.RC7 = 1;
             PORTDbits.RD2 = 1;
             break;
         default:
@@ -2980,7 +2974,7 @@ void multiplexado(uint8_t selector){
     return;
 }
 
-void tabla_7seg(int decimal){
+void tabla_7seg(uint8_t decimal){
     switch(decimal){
         case 0:
             valor_tabla = 0b00111111;
